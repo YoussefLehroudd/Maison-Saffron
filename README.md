@@ -11,6 +11,9 @@ A polished, responsive restaurant digital menu built with **HTML5, CSS3 and vani
 - Cart persistence with LocalStorage
 - Responsive mobile order bar and drawer
 - Keyboard-friendly controls and lightweight transitions
+- Fully translated French, English and Arabic UI, including all 12 dishes and cart flow
+- Accessible language selector with LocalStorage persistence and Arabic RTL layout
+- Consistent inline SVG icon system (no icon font dependency)
 - Demo-only checkout (no real purchase, payments, kitchen or server integration)
 
 ## Launch
@@ -27,4 +30,4 @@ This is a concept website for an imaginary restaurant. All dish names, prices, s
 
 ## Optional future features
 
-QR codes for tables, multi-language localization, admin menu management, and integration with a real restaurant POS/order backend.
+QR codes for tables, admin menu management, and integration with a real restaurant POS/order backend.
