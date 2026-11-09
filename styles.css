@@ -82,3 +82,30 @@ html[dir="rtl"] [data-cart-total]{direction:ltr;unicode-bidi:isolate}
  html[dir="rtl"] .hero-copy{padding:50px 6% 44px}
  html[dir="rtl"] .dish-tag{right:8px}
 }
+
+/* Corrections: i18n heading spacing, reliable SVG flags and roomy cart rows */
+.info-brand{min-width:0}
+.info-brand .eyebrow{display:block;line-height:1.5;margin:0 0 17px;letter-spacing:.13em;font-size:10px}
+.info-brand .eyebrow [data-i18n]{display:inline;position:static;width:auto;height:auto;line-height:inherit;margin:0;background:none;vertical-align:baseline}
+.info-brand h2{position:relative;clear:both;line-height:1.25;overflow-wrap:break-word;margin:0 0 14px}
+.info-brand>p{line-height:1.85}
+.language-menu button{direction:ltr;justify-content:flex-start;text-align:start;gap:10px;min-height:45px}
+.language-menu button[dir="rtl"]{direction:ltr}
+.language-menu .flag-wrap{display:inline-flex;align-items:center;justify-content:center;flex:0 0 24px;width:24px;height:16px;font-size:0}
+.language-menu .flag-icon{width:24px;height:16px;flex:none;display:block;overflow:hidden;border-radius:2px;box-shadow:0 0 0 1px #0000001a}
+.language-menu .lang-label{display:block;flex:1;min-width:0;font-size:13px;white-space:nowrap;line-height:1.4}
+.language-menu button[lang="ar"] .lang-label{font-family:'Cairo',Arial,sans-serif;direction:rtl;text-align:start}
+.language-menu button.selected svg:not(.flag-icon){opacity:1}
+.language-menu button svg:not(.flag-icon){margin-inline-start:auto}
+html[dir="rtl"] .language-menu button{text-align:start}
+.cart-row{grid-template-columns:60px minmax(0,1fr);align-items:start;gap:12px}
+.cart-row>img{width:60px;height:60px}
+.cart-row-main{min-width:0;max-width:100%}
+.cart-row-main strong{display:block;white-space:normal;overflow-wrap:anywhere;line-height:1.42;margin:0 0 5px}
+.cart-row-main>small{display:block;line-height:1.45;margin-bottom:8px}
+.cart-row-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 12px;min-width:0}
+.cart-row-bottom .qty-control{margin:0;flex:0 0 auto}
+.cart-row-bottom .qty-control button{width:29px;height:29px}
+.cart-row-bottom .line-total{white-space:nowrap;margin-inline-start:auto;flex:0 0 auto;font-size:12px;line-height:1.4}
+html[dir="rtl"] .cart-row-main{text-align:start}
+@media(max-width:420px){.drawer-head,.drawer-content,.drawer-foot{padding-inline:18px}.cart-row{grid-template-columns:54px minmax(0,1fr);gap:10px}.cart-row>img{width:54px;height:54px}.info-brand .eyebrow{margin-bottom:14px}}
