@@ -106,7 +106,7 @@ function renderCart(){
  `<div class="cart-empty"><span class="empty-symbol">${uiIcon('bag',45)}</span><h3>${t('emptyTitle')}</h3><p>${t('emptyText')}</p></div>`:
  dishes.filter(d=>cart[d.id]).map(d=>{
  const ld=displayDish(d);
- return `<div class="cart-row"><img src="${pic(d)}" alt=""/><div><strong>${ld.name}</strong><small>${money(d.price)} ${t('perDish')}</small><div class="qty-control"><button type="button" data-adjust="${d.id}" data-delta="-1" aria-label="${t('removeOneAria')}">${uiIcon('minus',15)}</button><span>${cart[d.id]}</span><button type="button" data-adjust="${d.id}" data-delta="1" aria-label="${t('addOneAria')}">${uiIcon('plus',15)}</button></div></div><span class="line-total">${money(d.price*cart[d.id])}</span></div>`;
+ return `<div class="cart-row"><img src="${pic(d)}" alt=""/><div class="cart-row-main"><strong>${ld.name}</strong><small>${money(d.price)} ${t('perDish')}</small><div class="cart-row-bottom"><div class="qty-control"><button type="button" data-adjust="${d.id}" data-delta="-1" aria-label="${t('removeOneAria')}">${uiIcon('minus',15)}</button><span>${cart[d.id]}</span><button type="button" data-adjust="${d.id}" data-delta="1" aria-label="${t('addOneAria')}">${uiIcon('plus',15)}</button></div><span class="line-total">${money(d.price*cart[d.id])}</span></div></div></div>`;
  }).join('');
 }
 function openCart(){el('#overlay').hidden=false;el('#cartDrawer').classList.add('open');el('#cartDrawer').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';el('#cartClose').focus()}
