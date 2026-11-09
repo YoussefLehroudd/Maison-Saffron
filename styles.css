@@ -126,3 +126,36 @@ html[dir="rtl"] .cart-row-main{text-align:start}
 .hero .eyebrow,.menu-section .eyebrow,.story-section .eyebrow{
   line-height:1.6;
 }
+
+/* Mobile usability: persistent top navigation and unobstructed footer */
+@media (max-width:760px){
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:45;
+    width:100%;
+    box-shadow:0 3px 14px rgba(30,51,40,.09);
+    background:var(--paper);
+  }
+  .site-header .language-menu{z-index:46}
+  html{scroll-padding-top:86px}
+  .mobile-cart{
+    bottom:calc(12px + env(safe-area-inset-bottom,0px));
+    left:12px;
+    right:12px;
+    max-width:100%;
+    gap:10px;
+  }
+  .mobile-cart > span{min-width:0}
+  .mobile-cart > span:last-child{white-space:nowrap;text-align:end}
+  body.has-mobile-cart footer{
+    padding-bottom:calc(112px + env(safe-area-inset-bottom,0px));
+  }
+  footer{position:relative;z-index:1}
+  footer p{max-width:100%;line-height:1.7}
+}
+@media (max-width:360px){
+  .mobile-cart{padding:13px 11px;font-size:10px;gap:6px}
+  .site-header{gap:8px}
+  .language{min-width:64px}
+}
