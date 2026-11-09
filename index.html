@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8f5ef" />
+  <meta name="description" content="Maison Saffron — une expérience culinaire contemporaine. Découvrez notre carte et composez votre commande." />
+  <title>Maison Saffron — La carte</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> Fait avec passion, servi avec amour <span class="announcement-dot"></span></div>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Maison Saffron, accueil"><span class="brand-icon">✳</span><span>MAISON <strong>SAFFRON</strong><small>RESTAURANT & ART DE VIVRE</small></span></a>
+    <nav class="header-nav" aria-label="Navigation principale"><a href="#carte">La carte</a><a href="#histoire">Notre histoire</a><a href="#infos">Informations</a></nav>
+    <div class="header-actions"><button class="language" id="langBtn" type="button" aria-label="Changer de langue">FR <span>⌄</span></button><button type="button" class="cart-toggle" id="cartTop" aria-label="Voir le panier"><span class="icon-bag" aria-hidden="true">♧</span><span class="cart-top-text">Ma commande</span><span class="cart-count" data-cart-count>0</span></button></div>
+  </header>
+  <main>
+    <section id="accueil" class="hero"><div class="hero-decor" aria-hidden="true"><span>✦</span><span>✦</span></div><div class="hero-copy"><p class="eyebrow"><span></span> BIENVENUE À MAISON SAFFRON</p><h1>Des saveurs qui<br/><em>racontent une histoire.</em></h1><p class="hero-intro">Une cuisine inspirée, des ingrédients soigneusement choisis et le plaisir de partager. Explorez notre carte, à votre rythme.</p><div class="hero-actions"><a class="primary-link" href="#carte">Découvrir la carte <span>↗</span></a><span class="hero-note"><span class="note-star">✦</span> Préparé avec des produits frais</span></div><div class="hero-stats"><span><strong>12+</strong><small>Créations maison</small></span><span class="stat-separator"></span><span><strong>100%</strong><small>Fraîcheur & saveur</small></span></div></div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1200&q=85&auto=format&fit=crop" alt="Plat gastronomique préparé avec des ingrédients frais" fetchpriority="high" onerror="this.classList.add('image-error')"/><div class="photo-badge"><span>✳</span><div>CUISINÉ AVEC <strong>LE CŒUR</strong></div></div></div></section>
+    <section id="carte" class="menu-section"><div class="section-heading"><div><p class="eyebrow dark">VOTRE VOYAGE GOURMAND</p><h2>Explorez <em>notre carte</em></h2><p>Une sélection imaginée pour tous les moments de gourmandise.</p></div><div class="menu-search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Rechercher un plat..." aria-label="Rechercher un plat"/></div></div><div class="category-line"><div class="categories" id="categories" aria-label="Catégories du menu"></div><span class="results-count" id="resultCount"></span></div><div class="menu-grid" id="menuGrid" aria-live="polite"></div><p class="no-results" id="noResults" hidden>Aucun plat trouvé. Essayez une autre recherche.</p></section>
+    <section class="story-section" id="histoire"><div class="story-art"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1050&q=85&auto=format&fit=crop" loading="lazy" alt="Restaurant élégant et chaleureux" /></div><div class="story-text"><p class="eyebrow dark">NOTRE PHILOSOPHIE</p><h2>La simplicité a <em>du goût.</em></h2><p>Chez Maison Saffron, chaque assiette est une invitation à ralentir, savourer et partager. Les produits de saison rencontrent une touche de créativité pour composer une cuisine généreuse et sincère.</p><div class="story-feature"><span>✳</span><p><strong>Des ingrédients sélectionnés</strong><small>La fraîcheur fait toute la différence.</small></p></div><div class="story-feature"><span>✳</span><p><strong>Des recettes faites maison</strong><small>Chaque détail compte, chaque saveur aussi.</small></p></div><span class="signature">Made with love & care ♡</span></div></section>
+    <section id="infos" class="info-section"><div class="info-brand"><span class="eyebrow">RESTONS EN CONTACT</span><h2>Votre table vous attend.</h2><p>Une démonstration de menu digital pour restaurant. Les coordonnées et prix sont fictifs.</p></div><div class="info-item"><span class="info-icon">◷</span><strong>Horaires</strong><p>Tous les jours<br/>12:00 – 23:00</p></div><div class="info-item"><span class="info-icon">⌖</span><strong>Adresse</strong><p>Centre-ville<br/>Maroc · Adresse démo</p></div><div class="info-item"><span class="info-icon">♡</span><strong>Suivez-nous</strong><p>Instagram · Facebook<br/>@maisonsaffron.demo</p></div></section>
+  </main>
+  <footer><span>✳ MAISON SAFFRON</span><p>© <span id="year"></span> Maison Saffron. Démonstration de menu digital.</p><a href="#accueil">Retour en haut ↑</a></footer>
+  <button class="mobile-cart" id="mobileCart" type="button"><span>Voir ma commande</span><span><span data-cart-count>0</span> articles · <b data-cart-total>0 DH</b></span></button>
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true"><div class="drawer-head"><div><p class="eyebrow dark">VOTRE SÉLECTION</p><h2 id="cartTitle">Ma commande <span id="cartHeadingCount">(0)</span></h2></div><button id="cartClose" class="close-btn" aria-label="Fermer le panier">×</button></div><div class="drawer-content" id="cartItems"></div><div class="drawer-foot"><div class="subtotal"><span>Sous-total</span><strong data-cart-total>0 DH</strong></div><p class="foot-note">Commande de démonstration — aucun paiement en ligne.</p><button class="checkout-btn" id="checkout">Confirmer la sélection <span>→</span></button><button class="clear-btn" id="clearCart">Vider le panier</button></div></aside>
+  <dialog id="itemDialog" class="item-dialog"><button class="modal-close close-btn" id="itemClose" aria-label="Fermer">×</button><div id="itemContent"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
