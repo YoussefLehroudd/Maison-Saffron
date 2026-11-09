@@ -3,3 +3,82 @@
 @media(max-width:760px){.announcement{font-size:9px}.site-header{min-height:69px;padding:12px 4%}.brand-icon{width:36px;height:36px;font-size:23px}.brand>span:last-child{font-size:13px}.brand small{font-size:7px;letter-spacing:.15em}.header-nav{display:none}.header-actions{gap:8px}.cart-toggle{width:39px;min-height:39px;justify-content:center;padding:0}.cart-top-text,.cart-toggle .cart-count{display:none}.language{font-size:11px}.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:50px 6% 44px}.hero h1{font-size:clamp(36px,8vw,51px)}.hero-intro{font-size:12px}.hero-stats{margin-top:30px}.hero-photo{min-height:310px}.hero-decor{display:none}.menu-section{padding:55px 4% 70px}.section-heading{display:block}.menu-search{width:100%;margin-top:24px}.category-line{margin-top:19px}.results-count{display:none}.categories{max-width:100%}.category-btn{padding:11px 13px}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dish-image{height:150px}.dish-body{padding:11px}.dish-name{font-size:16px}.dish-desc{font-size:10px;height:34px}.dish-price{font-size:15px}.dish-tag{top:8px;left:8px;padding:4px 6px;font-size:8px}.dish-bottom{padding-top:10px}.dish-info,.dish-add{width:29px;height:29px}.story-section{grid-template-columns:1fr}.story-art{min-height:270px}.story-text{padding:48px 6%}.info-section{grid-template-columns:repeat(2,minmax(0,1fr));padding:45px 6%;gap:25px}.info-brand{grid-column:1/-1}footer{flex-direction:column;gap:8px;text-align:center;padding:21px}.mobile-cart{display:flex;position:fixed;z-index:15;bottom:12px;left:12px;right:12px;border:0;border-radius:7px;justify-content:space-between;align-items:center;padding:15px 16px;color:#fff;background:var(--forest);box-shadow:0 8px 28px #17362760;font-size:11px;font-weight:700}.mobile-cart[hidden]{display:none!important}.toast{bottom:80px}body{padding-bottom:0}.drawer{width:min(420px,100vw)}}
 @media(max-width:420px){.menu-grid{grid-template-columns:1fr}.dish-image{height:205px}.dish-name{font-size:19px}.dish-body{padding:16px}.hero-actions{align-items:flex-start;gap:16px}.info-section{grid-template-columns:1fr}.info-brand{grid-column:auto}.story-art{min-height:220px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Reusable outlined icon set and genuinely interactive language switcher */
+.icon-sprite{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.brand-icon svg,.icon-bag svg,.dish-buttons svg,.info-icon svg,.story-feature svg,
+footer svg,.close-btn svg,.empty-symbol svg,.note-star svg,.primary-link svg,
+.checkout-btn svg,.qty-control svg{display:block;flex-shrink:0}
+.brand-icon{font-size:0}
+.brand-icon svg{width:25px;height:25px}
+.header-actions{position:relative;gap:12px}
+.language-picker{position:relative;z-index:20}
+.language{display:flex;align-items:center;justify-content:center;gap:7px;
+  background:#f5f4ee;border:1px solid #e3e6dc;border-radius:8px;
+  min-height:41px;min-width:80px;padding:0 11px;color:#29483a;
+  font-size:12px;letter-spacing:.025em;transition:background .2s,border-color .2s}
+.language:hover,.language[aria-expanded="true"]{background:#eaf1e9;border-color:#bbcfc0}
+.language svg{display:block}
+.language>svg:last-child{transition:transform .2s ease;opacity:.65}
+.language[aria-expanded="true"]>svg:last-child{transform:rotate(180deg)}
+.language-menu{position:absolute;top:calc(100% + 9px);right:0;min-width:180px;
+  background:#fffdf9;border:1px solid #e3e9df;border-radius:12px;
+  box-shadow:0 12px 40px #1b382126;padding:6px;z-index:40}
+.language-menu[hidden]{display:none!important}
+.language-menu button{width:100%;display:flex;align-items:center;gap:10px;padding:10px 12px;
+  background:transparent;border:0;border-radius:7px;color:#2e4134;font-weight:600;
+  text-align:start;font-size:13px;transition:background .15s ease}
+.language-menu button:hover,.language-menu button:focus-visible{background:#eef4ed}
+.language-menu button.selected{background:#e5efe7;color:#1f6345}
+.language-menu button>span{font-size:19px}
+.language-menu button svg{margin-inline-start:auto;opacity:0}
+.language-menu button.selected svg{opacity:1}
+.cart-toggle{border-radius:8px}
+.icon-bag{display:grid;place-items:center;font-size:0}
+.dish-info,.dish-add{display:grid;place-items:center}
+.dish-info svg,.dish-add svg{pointer-events:none}
+.dish-info:hover,.dish-add:hover{transform:translateY(-1px)}
+.close-btn{display:grid;place-items:center;font-size:0}
+.primary-link>span:last-child,.checkout-btn>span:last-child{display:grid;place-items:center}
+.story-feature>span,.info-icon{display:grid;place-items:center;width:25px;height:26px}
+.photo-badge>span{display:grid;place-items:center}
+.note-star{display:inline-flex;vertical-align:middle;align-items:center}
+.empty-symbol{display:grid;place-items:center}
+.qty-control button{display:grid;place-items:center;justify-content:center}
+footer>span{display:inline-flex;align-items:center;gap:7px}
+footer a{display:inline-flex;align-items:center;gap:6px}
+.brand,.header-nav,.header-actions,.hero-actions{min-width:0}
+/* Arabic: correct text direction, natural layout and font across the entire app */
+html[dir="rtl"] body{font-family:'Cairo','DM Sans',Arial,sans-serif}
+html[dir="rtl"] .hero h1,html[dir="rtl"] .section-heading h2,
+html[dir="rtl"] .story-text h2,html[dir="rtl"] .info-brand h2,
+html[dir="rtl"] .dish-name,html[dir="rtl"] .modal-copy h2,
+html[dir="rtl"] .drawer-head h2,html[dir="rtl"] .cart-empty h3,
+html[dir="rtl"] .cart-row strong{font-family:'Cairo',Georgia,sans-serif;letter-spacing:0}
+html[dir="rtl"] .eyebrow,html[dir="rtl"] .dish-category,
+html[dir="rtl"] .brand small,html[dir="rtl"] .announcement{letter-spacing:0}
+html[dir="rtl"] .language-menu{right:auto;left:0}
+html[dir="rtl"] .language-menu button{text-align:right}
+html[dir="rtl"] .hero-copy{padding-inline-start:max(10%,calc((100vw - 1370px)/2));padding-inline-end:7%}
+html[dir="rtl"] .hero-decor{left:auto;right:48%}
+html[dir="rtl"] .eyebrow>span{margin-right:0;margin-left:9px}
+html[dir="rtl"] .photo-badge{left:auto;right:31px}
+html[dir="rtl"] .dish-tag{left:auto;right:15px}
+html[dir="rtl"] .drawer{right:auto;left:0;transform:translateX(-110%);box-shadow:10px 0 35px #1b291e2b}
+html[dir="rtl"] .drawer.open{transform:translateX(0)}
+html[dir="rtl"] .item-dialog .modal-close{right:auto;left:14px}
+html[dir="rtl"] .toast{direction:rtl}
+html[dir="rtl"] .menu-search input,html[dir="rtl"] .dish-body,
+html[dir="rtl"] .story-text,html[dir="rtl"] .drawer,html[dir="rtl"] .modal-copy{text-align:start}
+html[dir="rtl"] .menu-search input::placeholder{text-align:start}
+html[dir="rtl"] .primary-link svg,html[dir="rtl"] footer a svg,
+html[dir="rtl"] .checkout-btn svg{transform:scaleX(-1)}
+html[dir="rtl"] .signature{font-style:normal}
+html[dir="rtl"] .dish-price,html[dir="rtl"] .line-total,
+html[dir="rtl"] [data-cart-total]{direction:ltr;unicode-bidi:isolate}
+@media(max-width:760px){
+ .language{min-width:70px;padding:0 7px;gap:5px;min-height:38px}
+ .header-actions{gap:7px}
+ .language-menu{min-width:164px}
+ html[dir="rtl"] .hero-copy{padding:50px 6% 44px}
+ html[dir="rtl"] .dish-tag{right:8px}
+}
