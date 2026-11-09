@@ -159,3 +159,16 @@ html[dir="rtl"] .cart-row-main{text-align:start}
   .site-header{gap:8px}
   .language{min-width:64px}
 }
+
+/* Keep the main navigation visible while scrolling on all screen sizes. */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:45;
+  background:var(--paper);
+  box-shadow:0 3px 14px rgba(30,51,40,.08);
+}
+html{scroll-padding-top:106px}
+@media(max-width:760px){
+  html{scroll-padding-top:86px}
+}
