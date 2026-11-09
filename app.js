@@ -100,6 +100,7 @@ function renderCart(){
  els('[data-cart-total]').forEach(e=>e.textContent=money(total.sum));
  el('#cartHeadingCount').textContent=`(${total.qty})`;
  el('#mobileCart').hidden=total.qty===0;
+ document.body.classList.toggle('has-mobile-cart',total.qty>0);
  el('#checkout').disabled=!total.qty;
  el('#checkout').style.opacity=total.qty?1:.5;
  el('#cartItems').innerHTML=!total.qty?
